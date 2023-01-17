@@ -15,6 +15,7 @@ struct Location: Decodable {
     var gps_x: String
     var gps_y: String
     var currency: String
+    var city: String
     
     enum CodingKeys: String, CodingKey {
         case address = "address"
@@ -22,6 +23,7 @@ struct Location: Decodable {
         case gps_x = "gps_x"
         case gps_y = "gps_y"
         case currency = "currency"
+        case city = "city"
     }
     
     init(from decoder: Decoder) throws {
@@ -31,6 +33,8 @@ struct Location: Decodable {
         self.gps_x = try container.decode(String.self, forKey: .gps_x)
         self.gps_y = try container.decode(String.self, forKey: .gps_y)
         self.currency = try container.decode(String.self, forKey: .currency)
+        self.city = try container.decode(String.self, forKey: .city)
+        
     }
     
 }
