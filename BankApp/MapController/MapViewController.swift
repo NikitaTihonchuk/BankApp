@@ -38,10 +38,32 @@ class MapViewController: UIViewController {
     
     private func parseData() {
         BelarusbankProvider().getCurrency { [weak self] allBank in
-            self?.cityNames = Array(Set(allBank.map({$0.city.lowercased() })))
+            guard let self = self else { return }
+            for bank in allBank {
+                self.drawMarkers(bank: bank)
+            }
+            self.cityNames = Array(Set(allBank.map({$0.city.lowercased() })))
         } failure: { error in
             print(error)
         }
+    }
+    
+    private func drawMarkers(bank: Location) {
+        guard let bankXcoordinate = Double(bank.gps_x),
+              let bankYcoordinate = Double(bank.gps_y) else { return }
+        let position = CLLocationCoordinate2D(latitude: bankXcoordinate, longitude: bankYcoordinate)
+        let marker = GMSMarker(position: position)
+        getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
+        marker.map = mapView
+    }
+    
+    private func getAdditionalInfo(marker: GMSMarker, title: String, snippet: String) {
+        marker.title = title
+        marker.snippet = snippet
+        if snippet.contains("Круглосуточно") {
+            marker.icon = GMSMarker.markerImage(with: .systemGreen)
+        }
+        mapView.selectedMarker = marker
     }
 
 }
