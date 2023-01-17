@@ -30,7 +30,7 @@ final class TabBarController: UITabBarController {
         self.viewControllers?.enumerated().forEach {
             $1.tabBarItem.title = dataSource[$0].title
             $1.tabBarItem.image = UIImage(systemName: dataSource[$0].iconName)
-            tabBar.tintColor = .black
+            tabBar.tintColor = .red
         }
     }
     
