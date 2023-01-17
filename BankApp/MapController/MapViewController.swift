@@ -39,7 +39,7 @@ extension MapViewController: UICollectionViewDelegate {
 extension MapViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == sortCollectionView {
-            return 3
+            return namesOfSorting.count
         }
         
         return 0
