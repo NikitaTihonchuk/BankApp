@@ -92,9 +92,9 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				1163E78B2977086E00EA39EB /* ProfileController */,
 				11C845C02977126C000B764B /* CityCollectionViewCell */,
 				11C845B72977121E000B764B /* SortCollectionViewCell */,
-				1163E78B2977086E00EA39EB /* ProfileController */,
 				1163E78D2977089E00EA39EB /* MapController */,
 				1163E7882977072100EA39EB /* TabBar */,
 				1163E7872977036900EA39EB /* BelarusbankAPI */,
