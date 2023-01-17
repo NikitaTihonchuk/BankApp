@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1133FD86297712E500820BE8 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133FD84297712E500820BE8 /* CityCollectionViewCell.swift */; };
+		1133FD87297712E500820BE8 /* CityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1133FD85297712E500820BE8 /* CityCollectionViewCell.xib */; };
 		1163E76E2976FF7A00EA39EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E76D2976FF7A00EA39EB /* AppDelegate.swift */; };
 		1163E7702976FF7A00EA39EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */; };
 		1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1163E7762976FF7D00EA39EB /* Assets.xcassets */; };
@@ -19,10 +21,14 @@
 		1163E79529770A7600EA39EB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79329770A7600EA39EB /* MapViewController.xib */; };
 		1163E79829770A8900EA39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79629770A8900EA39EB /* ProfileViewController.swift */; };
 		1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79729770A8900EA39EB /* ProfileViewController.xib */; };
+		11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C845B829771249000B764B /* SortCollectionViewCell.swift */; };
+		11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C845B929771249000B764B /* SortCollectionViewCell.xib */; };
 		96956B8A8DFE44AA7D12DF67 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1133FD84297712E500820BE8 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		1133FD85297712E500820BE8 /* CityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCollectionViewCell.xib; sourceTree = "<group>"; };
 		1163E76A2976FF7A00EA39EB /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1163E76D2976FF7A00EA39EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,8 @@
 		1163E79329770A7600EA39EB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		1163E79629770A8900EA39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1163E79729770A8900EA39EB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		11C845B829771249000B764B /* SortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCollectionViewCell.swift; sourceTree = "<group>"; };
+		11C845B929771249000B764B /* SortCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortCollectionViewCell.xib; sourceTree = "<group>"; };
 		24370D18416864903D1A0972 /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 		8D2C777CAC130DB33E0BCC89 /* Pods-BankApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.debug.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +92,10 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				1163E78B2977086E00EA39EB /* ProfileController */,
+				11C845C02977126C000B764B /* CityCollectionViewCell */,
+				11C845B72977121E000B764B /* SortCollectionViewCell */,
+				1163E78D2977089E00EA39EB /* MapController */,
 				1163E7882977072100EA39EB /* TabBar */,
 				1163E7872977036900EA39EB /* BelarusbankAPI */,
 				1163E76D2976FF7A00EA39EB /* AppDelegate.swift */,
@@ -109,8 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				1163E789297707BF00EA39EB /* TabBarController.swift */,
-				1163E78D2977089E00EA39EB /* MapController */,
-				1163E78B2977086E00EA39EB /* ProfileController */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -131,6 +141,24 @@
 				1163E79329770A7600EA39EB /* MapViewController.xib */,
 			);
 			path = MapController;
+			sourceTree = "<group>";
+		};
+		11C845B72977121E000B764B /* SortCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				11C845B829771249000B764B /* SortCollectionViewCell.swift */,
+				11C845B929771249000B764B /* SortCollectionViewCell.xib */,
+			);
+			path = SortCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		11C845C02977126C000B764B /* CityCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1133FD84297712E500820BE8 /* CityCollectionViewCell.swift */,
+				1133FD85297712E500820BE8 /* CityCollectionViewCell.xib */,
+			);
+			path = CityCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		D7C8C5BADBEFEF1AF54C6186 /* Frameworks */ = {
@@ -203,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1163E77A2976FF7D00EA39EB /* LaunchScreen.storyboard in Resources */,
+				1133FD87297712E500820BE8 /* CityCollectionViewCell.xib in Resources */,
 				1163E79529770A7600EA39EB /* MapViewController.xib in Resources */,
 				1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */,
+				11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */,
 				1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */,
 				1163E7842977023F00EA39EB /* BelarusbankModel.swift in Sources */,
 				1163E7862977027C00EA39EB /* BelarusbankRequest.swift in Sources */,
+				1133FD86297712E500820BE8 /* CityCollectionViewCell.swift in Sources */,
 				1163E76E2976FF7A00EA39EB /* AppDelegate.swift in Sources */,
 				1163E78A297707BF00EA39EB /* TabBarController.swift in Sources */,
 				1163E7702976FF7A00EA39EB /* SceneDelegate.swift in Sources */,
