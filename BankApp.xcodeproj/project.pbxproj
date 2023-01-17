@@ -78,9 +78,7 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
-				1163E7812977021F00EA39EB /* BelarusbankAPI.swift */,
-				1163E7832977023F00EA39EB /* BelarusbankModel.swift */,
-				1163E7852977027C00EA39EB /* BelarusbankRequest.swift */,
+				1163E7872977036900EA39EB /* BelarusbankAPI */,
 				1163E76D2976FF7A00EA39EB /* AppDelegate.swift */,
 				1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */,
 				1163E7712976FF7A00EA39EB /* ViewController.swift */,
@@ -90,6 +88,16 @@
 				1163E77B2976FF7D00EA39EB /* Info.plist */,
 			);
 			path = BankApp;
+			sourceTree = "<group>";
+		};
+		1163E7872977036900EA39EB /* BelarusbankAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1163E7852977027C00EA39EB /* BelarusbankRequest.swift */,
+				1163E7812977021F00EA39EB /* BelarusbankAPI.swift */,
+				1163E7832977023F00EA39EB /* BelarusbankModel.swift */,
+			);
+			path = BelarusbankAPI;
 			sourceTree = "<group>";
 		};
 		D7C8C5BADBEFEF1AF54C6186 /* Frameworks */ = {

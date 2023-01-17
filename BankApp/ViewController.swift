@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import CoreLocation
 
 class ViewController: UIViewController {
 
