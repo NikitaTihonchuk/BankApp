@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		1163E76E2976FF7A00EA39EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E76D2976FF7A00EA39EB /* AppDelegate.swift */; };
 		1163E7702976FF7A00EA39EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */; };
-		1163E7722976FF7A00EA39EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E7712976FF7A00EA39EB /* ViewController.swift */; };
-		1163E7752976FF7A00EA39EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1163E7732976FF7A00EA39EB /* Main.storyboard */; };
 		1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1163E7762976FF7D00EA39EB /* Assets.xcassets */; };
 		1163E77A2976FF7D00EA39EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1163E7782976FF7D00EA39EB /* LaunchScreen.storyboard */; };
 		1163E7822977021F00EA39EB /* BelarusbankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E7812977021F00EA39EB /* BelarusbankAPI.swift */; };
 		1163E7842977023F00EA39EB /* BelarusbankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E7832977023F00EA39EB /* BelarusbankModel.swift */; };
 		1163E7862977027C00EA39EB /* BelarusbankRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E7852977027C00EA39EB /* BelarusbankRequest.swift */; };
+		1163E78A297707BF00EA39EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E789297707BF00EA39EB /* TabBarController.swift */; };
+		1163E79429770A7600EA39EB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79229770A7600EA39EB /* MapViewController.swift */; };
+		1163E79529770A7600EA39EB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79329770A7600EA39EB /* MapViewController.xib */; };
+		1163E79829770A8900EA39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79629770A8900EA39EB /* ProfileViewController.swift */; };
+		1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79729770A8900EA39EB /* ProfileViewController.xib */; };
 		96956B8A8DFE44AA7D12DF67 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,14 +26,17 @@
 		1163E76A2976FF7A00EA39EB /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1163E76D2976FF7A00EA39EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1163E7712976FF7A00EA39EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1163E7742976FF7A00EA39EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1163E7762976FF7D00EA39EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1163E7792976FF7D00EA39EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1163E77B2976FF7D00EA39EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1163E7812977021F00EA39EB /* BelarusbankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelarusbankAPI.swift; sourceTree = "<group>"; };
 		1163E7832977023F00EA39EB /* BelarusbankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelarusbankModel.swift; sourceTree = "<group>"; };
 		1163E7852977027C00EA39EB /* BelarusbankRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelarusbankRequest.swift; sourceTree = "<group>"; };
+		1163E789297707BF00EA39EB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1163E79229770A7600EA39EB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1163E79329770A7600EA39EB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		1163E79629770A8900EA39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1163E79729770A8900EA39EB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		24370D18416864903D1A0972 /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 		8D2C777CAC130DB33E0BCC89 /* Pods-BankApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.debug.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,11 +84,10 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				1163E7882977072100EA39EB /* TabBar */,
 				1163E7872977036900EA39EB /* BelarusbankAPI */,
 				1163E76D2976FF7A00EA39EB /* AppDelegate.swift */,
 				1163E76F2976FF7A00EA39EB /* SceneDelegate.swift */,
-				1163E7712976FF7A00EA39EB /* ViewController.swift */,
-				1163E7732976FF7A00EA39EB /* Main.storyboard */,
 				1163E7762976FF7D00EA39EB /* Assets.xcassets */,
 				1163E7782976FF7D00EA39EB /* LaunchScreen.storyboard */,
 				1163E77B2976FF7D00EA39EB /* Info.plist */,
@@ -98,6 +103,34 @@
 				1163E7832977023F00EA39EB /* BelarusbankModel.swift */,
 			);
 			path = BelarusbankAPI;
+			sourceTree = "<group>";
+		};
+		1163E7882977072100EA39EB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1163E789297707BF00EA39EB /* TabBarController.swift */,
+				1163E78D2977089E00EA39EB /* MapController */,
+				1163E78B2977086E00EA39EB /* ProfileController */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1163E78B2977086E00EA39EB /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				1163E79629770A8900EA39EB /* ProfileViewController.swift */,
+				1163E79729770A8900EA39EB /* ProfileViewController.xib */,
+			);
+			path = ProfileController;
+			sourceTree = "<group>";
+		};
+		1163E78D2977089E00EA39EB /* MapController */ = {
+			isa = PBXGroup;
+			children = (
+				1163E79229770A7600EA39EB /* MapViewController.swift */,
+				1163E79329770A7600EA39EB /* MapViewController.xib */,
+			);
+			path = MapController;
 			sourceTree = "<group>";
 		};
 		D7C8C5BADBEFEF1AF54C6186 /* Frameworks */ = {
@@ -170,8 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1163E77A2976FF7D00EA39EB /* LaunchScreen.storyboard in Resources */,
+				1163E79529770A7600EA39EB /* MapViewController.xib in Resources */,
+				1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */,
 				1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */,
-				1163E7752976FF7A00EA39EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,26 +275,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1163E7722976FF7A00EA39EB /* ViewController.swift in Sources */,
 				1163E7842977023F00EA39EB /* BelarusbankModel.swift in Sources */,
 				1163E7862977027C00EA39EB /* BelarusbankRequest.swift in Sources */,
 				1163E76E2976FF7A00EA39EB /* AppDelegate.swift in Sources */,
+				1163E78A297707BF00EA39EB /* TabBarController.swift in Sources */,
 				1163E7702976FF7A00EA39EB /* SceneDelegate.swift in Sources */,
 				1163E7822977021F00EA39EB /* BelarusbankAPI.swift in Sources */,
+				1163E79829770A8900EA39EB /* ProfileViewController.swift in Sources */,
+				1163E79429770A7600EA39EB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1163E7732976FF7A00EA39EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1163E7742976FF7A00EA39EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1163E7782976FF7D00EA39EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -399,7 +427,6 @@
 				INFOPLIST_FILE = BankApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -428,7 +455,6 @@
 				INFOPLIST_FILE = BankApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
