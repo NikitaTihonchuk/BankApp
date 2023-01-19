@@ -58,7 +58,8 @@ class MapViewController: UIViewController {
             getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
             marker.map = mapView
         } else {
-            if bank.city.lowercased() == filterName! {
+            guard let filterName else { return }
+            if bank.city.lowercased() == filterName {
                 let marker = GMSMarker(position: position)
                 getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
                 marker.map = mapView
@@ -82,10 +83,7 @@ extension MapViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)  {
         
         if collectionView == cityCollectionView {
-            //let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath)
-           // guard let nameCell = cell as? CityCollectionViewCell else { return }
             filterName = cityNames[indexPath.row]
-            //print(filterName)
             mapView.clear()
             parseData()
          }
