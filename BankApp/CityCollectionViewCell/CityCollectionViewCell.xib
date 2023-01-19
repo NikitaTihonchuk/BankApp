@@ -11,18 +11,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCollectionViewCell" id="gTV-IL-0wX" customClass="CityCollectionViewCell" customModule="BankApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="111" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="111" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-Vr-rNB">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="61" height="50"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" title="Button">
                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapToCity:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bEb-2k-BsK"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -31,12 +34,13 @@
                 <constraint firstItem="ncj-Vr-rNB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6cf-oV-0KJ"/>
                 <constraint firstAttribute="bottom" secondItem="ncj-Vr-rNB" secondAttribute="bottom" id="BcC-k8-fNk"/>
                 <constraint firstItem="ncj-Vr-rNB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R9B-im-Shk"/>
-                <constraint firstAttribute="trailing" secondItem="ncj-Vr-rNB" secondAttribute="trailing" id="kQ0-lb-1id"/>
+                <constraint firstAttribute="trailing" secondItem="ncj-Vr-rNB" secondAttribute="trailing" constant="50" id="kQ0-lb-1id"/>
             </constraints>
+            <size key="customSize" width="111" height="50"/>
             <connections>
                 <outlet property="cityButton" destination="ncj-Vr-rNB" id="PNi-EA-iyr"/>
             </connections>
-            <point key="canvasLocation" x="-124" y="20"/>
+            <point key="canvasLocation" x="-78.625954198473281" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
 </document>

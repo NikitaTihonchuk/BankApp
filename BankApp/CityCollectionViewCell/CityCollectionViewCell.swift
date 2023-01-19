@@ -19,4 +19,11 @@ class CityCollectionViewCell: UICollectionViewCell {
     func setCityButton(name: String) {
         cityButton.setTitle(name, for: .normal)
     }
+    
+    @IBAction func didTapToCity(_ sender: UIButton) {
+        cityButton.titleLabel
+    }
+    
+    
+    
 }

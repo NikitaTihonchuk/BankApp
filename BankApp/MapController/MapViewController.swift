@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
             cityCollectionView.reloadData()
         }
     }
+    var filterName: String?
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,10 @@ class MapViewController: UIViewController {
     private func parseData() {
         BelarusbankProvider().getCurrency { [weak self] allBank in
             guard let self = self else { return }
+            self.cityNames = Array(Set(allBank.map({$0.city.lowercased() })))
             for bank in allBank {
                 self.drawMarkers(bank: bank)
             }
-            self.cityNames = Array(Set(allBank.map({$0.city.lowercased() })))
         } failure: { error in
             print(error)
         }
@@ -52,9 +53,17 @@ class MapViewController: UIViewController {
         guard let bankXcoordinate = Double(bank.gps_x),
               let bankYcoordinate = Double(bank.gps_y) else { return }
         let position = CLLocationCoordinate2D(latitude: bankXcoordinate, longitude: bankYcoordinate)
-        let marker = GMSMarker(position: position)
-        getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
-        marker.map = mapView
+        if filterName == nil {
+            let marker = GMSMarker(position: position)
+            getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
+            marker.map = mapView
+        } else {
+            if bank.city.lowercased() == filterName! {
+                let marker = GMSMarker(position: position)
+                getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
+                marker.map = mapView
+            }
+        }
     }
     
     private func getAdditionalInfo(marker: GMSMarker, title: String, snippet: String) {
@@ -70,6 +79,24 @@ class MapViewController: UIViewController {
 
 extension MapViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)  {
+        
+        if collectionView == cityCollectionView {
+            //let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath)
+           // guard let nameCell = cell as? CityCollectionViewCell else { return }
+            filterName = cityNames[indexPath.row]
+            //print(filterName)
+            mapView.clear()
+            parseData()
+         }
+       
+        }
+        
+    
+    
+    
+    
+    
 }
 
 extension MapViewController: UICollectionViewDataSource {
@@ -77,7 +104,7 @@ extension MapViewController: UICollectionViewDataSource {
         if collectionView == sortCollectionView {
             return namesOfSorting.count
         } else {
-            return cityNames.count
+                return cityNames.count
         }
     }
     
