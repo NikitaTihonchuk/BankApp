@@ -26,4 +26,16 @@ final class BelarusbankProvider {
             }
         }
     }
+    
+    func getGems(success: @escaping ArrayResponce<Gems>, failure: @escaping Error) {
+        provider.request(.getGems) { result in
+            switch result {
+            case .success(let responce):
+                guard let gems = try? JSONDecoder().decode([Gems].self, from: responce.data) else { return }
+                success(gems)
+            case .failure(let error):
+                failure(error.localizedDescription)
+            }
+        }
+    }
 }

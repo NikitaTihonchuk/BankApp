@@ -19,10 +19,12 @@
 		1163E78A297707BF00EA39EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E789297707BF00EA39EB /* TabBarController.swift */; };
 		1163E79429770A7600EA39EB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79229770A7600EA39EB /* MapViewController.swift */; };
 		1163E79529770A7600EA39EB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79329770A7600EA39EB /* MapViewController.xib */; };
-		1163E79829770A8900EA39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79629770A8900EA39EB /* ProfileViewController.swift */; };
-		1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79729770A8900EA39EB /* ProfileViewController.xib */; };
+		1163E79829770A8900EA39EB /* GemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163E79629770A8900EA39EB /* GemsViewController.swift */; };
+		1163E79929770A8900EA39EB /* GemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79729770A8900EA39EB /* GemsViewController.xib */; };
 		11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C845B829771249000B764B /* SortCollectionViewCell.swift */; };
 		11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C845B929771249000B764B /* SortCollectionViewCell.xib */; };
+		11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07A582979A53100390926 /* GemsTableViewCell.swift */; };
+		11D07A5B2979A53100390926 /* GemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D07A592979A53100390926 /* GemsTableViewCell.xib */; };
 		96956B8A8DFE44AA7D12DF67 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +43,12 @@
 		1163E789297707BF00EA39EB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1163E79229770A7600EA39EB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1163E79329770A7600EA39EB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
-		1163E79629770A8900EA39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1163E79729770A8900EA39EB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		1163E79629770A8900EA39EB /* GemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemsViewController.swift; sourceTree = "<group>"; };
+		1163E79729770A8900EA39EB /* GemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GemsViewController.xib; sourceTree = "<group>"; };
 		11C845B829771249000B764B /* SortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C845B929771249000B764B /* SortCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortCollectionViewCell.xib; sourceTree = "<group>"; };
+		11D07A582979A53100390926 /* GemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemsTableViewCell.swift; sourceTree = "<group>"; };
+		11D07A592979A53100390926 /* GemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GemsTableViewCell.xib; sourceTree = "<group>"; };
 		24370D18416864903D1A0972 /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 		8D2C777CAC130DB33E0BCC89 /* Pods-BankApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.debug.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B1B49EF6D82718B62176E09D /* Pods_BankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +96,8 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
-				1163E78B2977086E00EA39EB /* ProfileController */,
+				11D07A572979A50B00390926 /* GemsTableViewCell */,
+				1163E78B2977086E00EA39EB /* GemsController */,
 				11C845C02977126C000B764B /* CityCollectionViewCell */,
 				11C845B72977121E000B764B /* SortCollectionViewCell */,
 				1163E78D2977089E00EA39EB /* MapController */,
@@ -125,13 +130,13 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		1163E78B2977086E00EA39EB /* ProfileController */ = {
+		1163E78B2977086E00EA39EB /* GemsController */ = {
 			isa = PBXGroup;
 			children = (
-				1163E79629770A8900EA39EB /* ProfileViewController.swift */,
-				1163E79729770A8900EA39EB /* ProfileViewController.xib */,
+				1163E79629770A8900EA39EB /* GemsViewController.swift */,
+				1163E79729770A8900EA39EB /* GemsViewController.xib */,
 			);
-			path = ProfileController;
+			path = GemsController;
 			sourceTree = "<group>";
 		};
 		1163E78D2977089E00EA39EB /* MapController */ = {
@@ -159,6 +164,15 @@
 				1133FD85297712E500820BE8 /* CityCollectionViewCell.xib */,
 			);
 			path = CityCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		11D07A572979A50B00390926 /* GemsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				11D07A582979A53100390926 /* GemsTableViewCell.swift */,
+				11D07A592979A53100390926 /* GemsTableViewCell.xib */,
+			);
+			path = GemsTableViewCell;
 			sourceTree = "<group>";
 		};
 		D7C8C5BADBEFEF1AF54C6186 /* Frameworks */ = {
@@ -230,10 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D07A5B2979A53100390926 /* GemsTableViewCell.xib in Resources */,
 				1163E77A2976FF7D00EA39EB /* LaunchScreen.storyboard in Resources */,
 				1133FD87297712E500820BE8 /* CityCollectionViewCell.xib in Resources */,
 				1163E79529770A7600EA39EB /* MapViewController.xib in Resources */,
-				1163E79929770A8900EA39EB /* ProfileViewController.xib in Resources */,
+				1163E79929770A8900EA39EB /* GemsViewController.xib in Resources */,
 				11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */,
 				1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */,
 			);
@@ -313,7 +328,8 @@
 				1163E78A297707BF00EA39EB /* TabBarController.swift in Sources */,
 				1163E7702976FF7A00EA39EB /* SceneDelegate.swift in Sources */,
 				1163E7822977021F00EA39EB /* BelarusbankAPI.swift in Sources */,
-				1163E79829770A8900EA39EB /* ProfileViewController.swift in Sources */,
+				11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */,
+				1163E79829770A8900EA39EB /* GemsViewController.swift in Sources */,
 				1163E79429770A7600EA39EB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
