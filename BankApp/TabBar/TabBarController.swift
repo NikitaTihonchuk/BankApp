@@ -15,7 +15,7 @@ final class TabBarController: UITabBarController {
     }
 
     private func setupTabBar() {
-        let dataSource: [TabBarItem] = [.main, .gems]
+        let dataSource: [TabBarItem] = [.main, .gems, .metals]
         self.viewControllers = dataSource.map {
             switch $0 {
             case .main:
@@ -24,6 +24,9 @@ final class TabBarController: UITabBarController {
             case .gems:
                 let gemsController = GemsViewController()
                     return self.wrappedInNavigationController(with: gemsController, title: $0.title)
+            case .metals:
+                let metalController = MetalViewController()
+                    return self.wrappedInNavigationController(with: metalController, title: $0.title)
             }
         }
         
@@ -43,6 +46,7 @@ final class TabBarController: UITabBarController {
 private enum TabBarItem {
     case main
     case gems
+    case metals
    
     
     var title: String {
@@ -50,6 +54,8 @@ private enum TabBarItem {
         case .main:
             return "Главная"
         case .gems:
+            return "Гемы"
+        case .metals:
             return "Металлы"
         }
     }
@@ -60,6 +66,8 @@ private enum TabBarItem {
             return "house.fill"
         case .gems:
             return "folder.fill"
+        case .metals:
+            return "square"
         }
     }
 }
