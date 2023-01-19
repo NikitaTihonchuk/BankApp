@@ -23,6 +23,8 @@
 		1163E79929770A8900EA39EB /* GemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1163E79729770A8900EA39EB /* GemsViewController.xib */; };
 		11A9DFDE2979B85C00B859BA /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9DFDC2979B85C00B859BA /* MetalViewController.swift */; };
 		11A9DFDF2979B85C00B859BA /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A9DFDD2979B85C00B859BA /* MetalViewController.xib */; };
+		11A9DFE32979BD7E00B859BA /* MetalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9DFE12979BD7E00B859BA /* MetalTableViewCell.swift */; };
+		11A9DFE42979BD7E00B859BA /* MetalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */; };
 		11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C845B829771249000B764B /* SortCollectionViewCell.swift */; };
 		11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C845B929771249000B764B /* SortCollectionViewCell.xib */; };
 		11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07A582979A53100390926 /* GemsTableViewCell.swift */; };
@@ -49,6 +51,8 @@
 		1163E79729770A8900EA39EB /* GemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GemsViewController.xib; sourceTree = "<group>"; };
 		11A9DFDC2979B85C00B859BA /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		11A9DFDD2979B85C00B859BA /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
+		11A9DFE12979BD7E00B859BA /* MetalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTableViewCell.swift; sourceTree = "<group>"; };
+		11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalTableViewCell.xib; sourceTree = "<group>"; };
 		11C845B829771249000B764B /* SortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C845B929771249000B764B /* SortCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortCollectionViewCell.xib; sourceTree = "<group>"; };
 		11D07A582979A53100390926 /* GemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemsTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				11A9DFE02979BD5800B859BA /* MetalControllerViewCell */,
 				11A9DFDB2979B84200B859BA /* MetalController */,
 				11D07A572979A50B00390926 /* GemsTableViewCell */,
 				1163E78B2977086E00EA39EB /* GemsController */,
@@ -160,6 +165,15 @@
 				11A9DFDD2979B85C00B859BA /* MetalViewController.xib */,
 			);
 			path = MetalController;
+			sourceTree = "<group>";
+		};
+		11A9DFE02979BD5800B859BA /* MetalControllerViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				11A9DFE12979BD7E00B859BA /* MetalTableViewCell.swift */,
+				11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */,
+			);
+			path = MetalControllerViewCell;
 			sourceTree = "<group>";
 		};
 		11C845B72977121E000B764B /* SortCollectionViewCell */ = {
@@ -265,6 +279,7 @@
 				1163E79529770A7600EA39EB /* MapViewController.xib in Resources */,
 				1163E79929770A8900EA39EB /* GemsViewController.xib in Resources */,
 				11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */,
+				11A9DFE42979BD7E00B859BA /* MetalTableViewCell.xib in Resources */,
 				1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +361,7 @@
 				1163E7822977021F00EA39EB /* BelarusbankAPI.swift in Sources */,
 				11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */,
 				1163E79829770A8900EA39EB /* GemsViewController.swift in Sources */,
+				11A9DFE32979BD7E00B859BA /* MetalTableViewCell.swift in Sources */,
 				1163E79429770A7600EA39EB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

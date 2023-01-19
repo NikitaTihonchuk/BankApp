@@ -69,3 +69,30 @@ struct Gems: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
     }
 }
+
+struct Metal: Decodable {
+    var gold10: String
+    var gold20: String
+    var gold50: String
+    var city: String
+    var department: String
+    
+    enum CodingKeys: String, CodingKey {
+       case gold10 = "ZOL_10_out"
+       case gold20 = "ZOL_20_out"
+       case gold50 = "ZOL_50_out"
+       case city = "name"
+       case department = "filials_text"
+       
+      
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.gold10 = try container.decode(String.self, forKey: .gold10)
+        self.gold20 = try container.decode(String.self, forKey: .gold20)
+        self.gold50 = try container.decode(String.self, forKey: .gold50)
+        self.city = try container.decode(String.self, forKey: .city)
+        self.department = try container.decode(String.self, forKey: .department)
+    }
+}

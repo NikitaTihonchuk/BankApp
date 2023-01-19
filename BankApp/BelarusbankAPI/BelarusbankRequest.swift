@@ -38,4 +38,18 @@ final class BelarusbankProvider {
             }
         }
     }
+    
+    func getMetals(success: @escaping ArrayResponce<Metal>, failure: @escaping Error) {
+        provider.request(.getMetal) { result in
+            switch result {
+                case .success(let responce):
+                    guard let metal = try? JSONDecoder().decode([Metal].self, from: responce.data) else { return }
+                    success(metal)
+                case .failure(let error):
+                    failure(error.localizedDescription)
+            }
+        }
+    }
+    
+    
 }
