@@ -4,6 +4,7 @@ import Moya
 enum BelarusbankAPI {
     case getAllBank
     case getGems
+    case getMetal
 }
 
 extension BelarusbankAPI: TargetType {
@@ -13,6 +14,8 @@ extension BelarusbankAPI: TargetType {
             return URL(string: "https://belarusbank.by/api/atm?")!
         case .getGems:
             return URL(string: "https://belarusbank.by/api/getgems")!
+        case .getMetal:
+            return URL(string: "https://belarusbank.by/api/getinfodrall")!
         }
        
     }
@@ -22,6 +25,8 @@ extension BelarusbankAPI: TargetType {
         case .getAllBank:
             return ""
         case .getGems:
+            return ""
+        case .getMetal:
             return ""
         }
     
@@ -36,6 +41,8 @@ extension BelarusbankAPI: TargetType {
         case .getAllBank:
             return .get
         case .getGems:
+            return .get
+        case .getMetal:
             return .get
         }
     }
@@ -58,13 +65,15 @@ extension BelarusbankAPI: TargetType {
                 parameters["ATM_currency"] = "BYN,USD,EUR"
             case .getGems:
                 return nil
+            case .getMetal:
+                return nil
         }
         return parameters
     }
     
     var enocding: ParameterEncoding {
         switch self {
-        case .getAllBank, .getGems:
+        case .getAllBank, .getGems, .getMetal:
             return URLEncoding.queryString
         }
     }
