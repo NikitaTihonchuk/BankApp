@@ -25,6 +25,10 @@
 		11A9DFDF2979B85C00B859BA /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A9DFDD2979B85C00B859BA /* MetalViewController.xib */; };
 		11A9DFE32979BD7E00B859BA /* MetalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9DFE12979BD7E00B859BA /* MetalTableViewCell.swift */; };
 		11A9DFE42979BD7E00B859BA /* MetalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */; };
+		11B43D2629803A8000AF6BCD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B43D2429803A8000AF6BCD /* NewsViewController.swift */; };
+		11B43D2729803A8000AF6BCD /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B43D2529803A8000AF6BCD /* NewsViewController.xib */; };
+		11B43D2B29803B9600AF6BCD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B43D2929803B9600AF6BCD /* NewsTableViewCell.swift */; };
+		11B43D2C29803B9600AF6BCD /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B43D2A29803B9600AF6BCD /* NewsTableViewCell.xib */; };
 		11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C845B829771249000B764B /* SortCollectionViewCell.swift */; };
 		11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C845B929771249000B764B /* SortCollectionViewCell.xib */; };
 		11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07A582979A53100390926 /* GemsTableViewCell.swift */; };
@@ -53,6 +57,10 @@
 		11A9DFDD2979B85C00B859BA /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
 		11A9DFE12979BD7E00B859BA /* MetalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTableViewCell.swift; sourceTree = "<group>"; };
 		11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalTableViewCell.xib; sourceTree = "<group>"; };
+		11B43D2429803A8000AF6BCD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		11B43D2529803A8000AF6BCD /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		11B43D2929803B9600AF6BCD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		11B43D2A29803B9600AF6BCD /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		11C845B829771249000B764B /* SortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C845B929771249000B764B /* SortCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortCollectionViewCell.xib; sourceTree = "<group>"; };
 		11D07A582979A53100390926 /* GemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemsTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,12 +112,9 @@
 		1163E76C2976FF7A00EA39EB /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
-				11A9DFE02979BD5800B859BA /* MetalControllerViewCell */,
+				11B43D2329803A6900AF6BCD /* NewsController */,
 				11A9DFDB2979B84200B859BA /* MetalController */,
-				11D07A572979A50B00390926 /* GemsTableViewCell */,
 				1163E78B2977086E00EA39EB /* GemsController */,
-				11C845C02977126C000B764B /* CityCollectionViewCell */,
-				11C845B72977121E000B764B /* SortCollectionViewCell */,
 				1163E78D2977089E00EA39EB /* MapController */,
 				1163E7882977072100EA39EB /* TabBar */,
 				1163E7872977036900EA39EB /* BelarusbankAPI */,
@@ -143,6 +148,7 @@
 		1163E78B2977086E00EA39EB /* GemsController */ = {
 			isa = PBXGroup;
 			children = (
+				11D07A572979A50B00390926 /* GemsTableViewCell */,
 				1163E79629770A8900EA39EB /* GemsViewController.swift */,
 				1163E79729770A8900EA39EB /* GemsViewController.xib */,
 			);
@@ -152,6 +158,8 @@
 		1163E78D2977089E00EA39EB /* MapController */ = {
 			isa = PBXGroup;
 			children = (
+				11C845C02977126C000B764B /* CityCollectionViewCell */,
+				11C845B72977121E000B764B /* SortCollectionViewCell */,
 				1163E79229770A7600EA39EB /* MapViewController.swift */,
 				1163E79329770A7600EA39EB /* MapViewController.xib */,
 			);
@@ -161,6 +169,7 @@
 		11A9DFDB2979B84200B859BA /* MetalController */ = {
 			isa = PBXGroup;
 			children = (
+				11A9DFE02979BD5800B859BA /* MetalControllerViewCell */,
 				11A9DFDC2979B85C00B859BA /* MetalViewController.swift */,
 				11A9DFDD2979B85C00B859BA /* MetalViewController.xib */,
 			);
@@ -174,6 +183,25 @@
 				11A9DFE22979BD7E00B859BA /* MetalTableViewCell.xib */,
 			);
 			path = MetalControllerViewCell;
+			sourceTree = "<group>";
+		};
+		11B43D2329803A6900AF6BCD /* NewsController */ = {
+			isa = PBXGroup;
+			children = (
+				11B43D2829803B6400AF6BCD /* NewsTableViewCell */,
+				11B43D2429803A8000AF6BCD /* NewsViewController.swift */,
+				11B43D2529803A8000AF6BCD /* NewsViewController.xib */,
+			);
+			path = NewsController;
+			sourceTree = "<group>";
+		};
+		11B43D2829803B6400AF6BCD /* NewsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				11B43D2929803B9600AF6BCD /* NewsTableViewCell.swift */,
+				11B43D2A29803B9600AF6BCD /* NewsTableViewCell.xib */,
+			);
+			path = NewsTableViewCell;
 			sourceTree = "<group>";
 		};
 		11C845B72977121E000B764B /* SortCollectionViewCell */ = {
@@ -279,6 +307,8 @@
 				1163E79529770A7600EA39EB /* MapViewController.xib in Resources */,
 				1163E79929770A8900EA39EB /* GemsViewController.xib in Resources */,
 				11C845BB29771249000B764B /* SortCollectionViewCell.xib in Resources */,
+				11B43D2C29803B9600AF6BCD /* NewsTableViewCell.xib in Resources */,
+				11B43D2729803A8000AF6BCD /* NewsViewController.xib in Resources */,
 				11A9DFE42979BD7E00B859BA /* MetalTableViewCell.xib in Resources */,
 				1163E7772976FF7D00EA39EB /* Assets.xcassets in Resources */,
 			);
@@ -352,6 +382,7 @@
 			files = (
 				11C845BA29771249000B764B /* SortCollectionViewCell.swift in Sources */,
 				1163E7842977023F00EA39EB /* BelarusbankModel.swift in Sources */,
+				11B43D2B29803B9600AF6BCD /* NewsTableViewCell.swift in Sources */,
 				11A9DFDE2979B85C00B859BA /* MetalViewController.swift in Sources */,
 				1163E7862977027C00EA39EB /* BelarusbankRequest.swift in Sources */,
 				1133FD86297712E500820BE8 /* CityCollectionViewCell.swift in Sources */,
@@ -361,6 +392,7 @@
 				1163E7822977021F00EA39EB /* BelarusbankAPI.swift in Sources */,
 				11D07A5A2979A53100390926 /* GemsTableViewCell.swift in Sources */,
 				1163E79829770A8900EA39EB /* GemsViewController.swift in Sources */,
+				11B43D2629803A8000AF6BCD /* NewsViewController.swift in Sources */,
 				11A9DFE32979BD7E00B859BA /* MetalTableViewCell.swift in Sources */,
 				1163E79429770A7600EA39EB /* MapViewController.swift in Sources */,
 			);

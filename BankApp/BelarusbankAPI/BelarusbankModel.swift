@@ -116,3 +116,24 @@ struct Metal: Decodable {
         self.department = try container.decode(String.self, forKey: .department)
     }
 }
+
+struct News: Decodable {
+    var titleName: String
+    var link: String
+    var image: String
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case titleName = "name_ru"
+        case link = "link"
+        case image = "img"
+      
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.titleName = try container.decode(String.self, forKey: .titleName)
+        self.link = try container.decode(String.self, forKey: .link)
+        self.image = try container.decode(String.self, forKey: .image)
+    }
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="233" id="KGk-i7-Jjw" customClass="NewsTableViewCell" customModule="BankApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zvq-6L-buN">
+                        <rect key="frame" x="0.0" y="20.333333333333329" width="100" height="202.66666666666669"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PO5-ub-Ydo">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FvQ-8M-iFR"/>
+                                    <constraint firstAttribute="width" constant="100" id="drl-n6-qPV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjm-eK-SRe">
+                                <rect key="frame" x="0.0" y="100" width="100" height="102.66666666666669"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Читать далее">
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showNews:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rkm-1V-3BO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PO5-ub-Ydo" firstAttribute="top" secondItem="Zvq-6L-buN" secondAttribute="top" id="ID0-oq-ZaU"/>
+                            <constraint firstItem="PO5-ub-Ydo" firstAttribute="leading" secondItem="Zvq-6L-buN" secondAttribute="leading" id="paD-R8-jBl"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMP-QX-IRI">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="20.333333333333332"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Zvq-6L-buN" secondAttribute="bottom" constant="10" id="2YM-LH-Rr5"/>
+                    <constraint firstItem="XMP-QX-IRI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8xK-rP-2zk"/>
+                    <constraint firstItem="Zvq-6L-buN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O8i-kE-Pn5"/>
+                    <constraint firstItem="XMP-QX-IRI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="azI-aZ-JBy"/>
+                    <constraint firstAttribute="trailing" secondItem="Zvq-6L-buN" secondAttribute="trailing" id="hMs-nE-1m0"/>
+                    <constraint firstAttribute="trailing" secondItem="XMP-QX-IRI" secondAttribute="trailing" id="lHt-x8-hdP"/>
+                    <constraint firstItem="Zvq-6L-buN" firstAttribute="top" secondItem="XMP-QX-IRI" secondAttribute="bottom" id="yzl-r0-ca7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="linkButton" destination="Tjm-eK-SRe" id="P6V-U1-WAq"/>
+                <outlet property="newsImage" destination="PO5-ub-Ydo" id="oBd-tU-F7p"/>
+                <outlet property="titleLabel" destination="XMP-QX-IRI" id="N2l-6X-Q7E"/>
+            </connections>
+            <point key="canvasLocation" x="134.35114503816794" y="101.05633802816902"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
