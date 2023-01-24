@@ -18,18 +18,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-1p-7PH">
-                        <rect key="frame" x="5" y="5" width="145" height="40"/>
+                        <rect key="frame" x="5" y="5" width="195" height="40"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-Vr-rNB">
-                                <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="didTapToCity:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bEb-2k-BsK"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-ye-2eN">
+                                <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -37,15 +33,15 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="NzG-1p-7PH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="4V3-X4-in7"/>
-                <constraint firstAttribute="trailing" secondItem="NzG-1p-7PH" secondAttribute="trailing" constant="50" id="rCj-pe-ytV"/>
+                <constraint firstAttribute="trailing" secondItem="NzG-1p-7PH" secondAttribute="trailing" id="rCj-pe-ytV"/>
                 <constraint firstAttribute="bottom" secondItem="NzG-1p-7PH" secondAttribute="bottom" constant="5" id="vmU-pZ-Fmh"/>
                 <constraint firstItem="NzG-1p-7PH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="zp8-QW-tEn"/>
             </constraints>
             <size key="customSize" width="189" height="50"/>
             <connections>
-                <outlet property="cityButton" destination="ncj-Vr-rNB" id="PNi-EA-iyr"/>
+                <outlet property="cityLabel" destination="8Wu-ye-2eN" id="uAS-iN-l4J"/>
             </connections>
-            <point key="canvasLocation" x="-40.458015267175568" y="20.422535211267608"/>
+            <point key="canvasLocation" x="-41.221374045801525" y="20.422535211267608"/>
         </collectionViewCell>
     </objects>
 </document>

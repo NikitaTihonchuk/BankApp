@@ -9,7 +9,7 @@ import UIKit
 
 class CityCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var cityButton: UIButton!
+    @IBOutlet weak var cityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,12 +17,9 @@ class CityCollectionViewCell: UICollectionViewCell {
     }
 
     func setCityButton(name: String) {
-        cityButton.setTitle(name, for: .normal)
+        cityLabel.text = name
     }
-    
-    @IBAction func didTapToCity(_ sender: UIButton) {
-        cityButton.titleLabel
-    }
+  
     
     
     
