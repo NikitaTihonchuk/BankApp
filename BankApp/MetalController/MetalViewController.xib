@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MetalViewController" customModule="BankApp" customModuleProvider="target">
             <connections>
-                <outlet property="segmentControl" destination="7gw-N4-cVQ" id="0yM-4I-Abd"/>
+                <outlet property="segmentControl" destination="7gw-N4-cVQ" id="m7j-eS-5E8"/>
                 <outlet property="tableView" destination="NWb-Kx-VUg" id="Vub-Pa-Tl7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,10 +28,13 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7gw-N4-cVQ">
                     <rect key="frame" x="0.0" y="59" width="393" height="32"/>
                     <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                        <segment title="Third"/>
+                        <segment title="Золото"/>
+                        <segment title="Серебро"/>
+                        <segment title="Платина"/>
                     </segments>
+                    <connections>
+                        <action selector="segmentAction:" destination="-1" eventType="valueChanged" id="KcG-3a-zFC"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
