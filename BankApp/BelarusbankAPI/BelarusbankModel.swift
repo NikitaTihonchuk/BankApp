@@ -74,6 +74,13 @@ struct Metal: Decodable {
     var gold10: String
     var gold20: String
     var gold50: String
+    var silver10: String
+    var silver20: String
+    var silver50: String
+    var platina10: String
+    var platina20: String
+    var platina50: String
+
     var city: String
     var department: String
     
@@ -81,6 +88,13 @@ struct Metal: Decodable {
        case gold10 = "ZOL_10_out"
        case gold20 = "ZOL_20_out"
        case gold50 = "ZOL_50_out"
+       case silver10 = "SIL_10_out"
+       case silver20 = "SIL_20_out"
+       case silver50 = "SIL_50_out"
+       case platina10 = "PL_10_out"
+       case platina20 = "PL_20_out"
+       case platina50 = "PL_50_out"
+
        case city = "name"
        case department = "filials_text"
        
@@ -92,6 +106,12 @@ struct Metal: Decodable {
         self.gold10 = try container.decode(String.self, forKey: .gold10)
         self.gold20 = try container.decode(String.self, forKey: .gold20)
         self.gold50 = try container.decode(String.self, forKey: .gold50)
+        self.silver10 = try container.decode(String.self, forKey: .silver10)
+        self.silver20 = try container.decode(String.self, forKey: .silver20)
+        self.silver50 = try container.decode(String.self, forKey: .silver50)
+        self.platina10 = try container.decode(String.self, forKey: .platina10)
+        self.platina20 = try container.decode(String.self, forKey: .platina20)
+        self.platina50 = try container.decode(String.self, forKey: .platina50)
         self.city = try container.decode(String.self, forKey: .city)
         self.department = try container.decode(String.self, forKey: .department)
     }
