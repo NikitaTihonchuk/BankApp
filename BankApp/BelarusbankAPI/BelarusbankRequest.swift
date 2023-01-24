@@ -51,5 +51,15 @@ final class BelarusbankProvider {
         }
     }
     
-    
+    func getNews(success: @escaping ArrayResponce<News>, failure: @escaping Error) {
+        provider.request(.getNews) { result in
+            switch result {
+                case .success(let responce):
+                    guard let news = try? JSONDecoder().decode([News].self, from: responce.data) else { return }
+                    success(news)
+                case .failure(let error):
+                    failure(error.localizedDescription)
+            }
+        }
+    }
 }

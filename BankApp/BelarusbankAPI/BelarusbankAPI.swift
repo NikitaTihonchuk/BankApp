@@ -5,6 +5,7 @@ enum BelarusbankAPI {
     case getAllBank
     case getGems
     case getMetal
+    case getNews
 }
 
 extension BelarusbankAPI: TargetType {
@@ -16,8 +17,11 @@ extension BelarusbankAPI: TargetType {
             return URL(string: "https://belarusbank.by/api/getgems")!
         case .getMetal:
             return URL(string: "https://belarusbank.by/api/getinfodrall")!
+        case .getNews:
+            return URL(string: "https://belarusbank.by/api/news_info")!
         }
-       
+        
+        
     }
     
     var path: String {
@@ -28,12 +32,14 @@ extension BelarusbankAPI: TargetType {
             return ""
         case .getMetal:
             return ""
+        case .getNews:
+            return ""
         }
-    
+        
     }
     
     var sampleData: Data {
-       return Data()
+        return Data()
     }
     
     var method: Moya.Method {
@@ -43,6 +49,8 @@ extension BelarusbankAPI: TargetType {
         case .getGems:
             return .get
         case .getMetal:
+            return .get
+        case .getNews:
             return .get
         }
     }
@@ -61,22 +69,25 @@ extension BelarusbankAPI: TargetType {
         var parameters = [String : Any]()
         
         switch self {
-            case .getAllBank:
-                parameters["ATM_currency"] = "BYN,USD,EUR"
-            case .getGems:
-                return nil
-            case .getMetal:
-                return nil
+        case .getAllBank:
+            parameters["ATM_currency"] = "BYN,USD,EUR"
+        case .getGems:
+            return nil
+        case .getMetal:
+            return nil
+        case .getNews:
+            parameters["lang"] = "ru"
         }
         return parameters
     }
     
     var enocding: ParameterEncoding {
         switch self {
-        case .getAllBank, .getGems, .getMetal:
+        case .getAllBank, .getGems, .getMetal, .getNews:
             return URLEncoding.queryString
+            
         }
+        
+        
     }
-    
-    
 }

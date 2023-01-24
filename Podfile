@@ -9,5 +9,6 @@ target 'BankApp' do
 pod 'GoogleMaps'
 pod 'Moya'
 pod 'Moya-ObjectMapper', '2.9'
+pod 'SDWebImage'
 
 end
