@@ -22,6 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" restorationIdentifier="GMSMapView" translatesAutoresizingMaskIntoConstraints="NO" id="kKf-U6-wMg" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="18c-q6-it2">
                     <rect key="frame" x="0.0" y="758" width="393" height="60"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -36,7 +40,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-l2-gF8">
-                    <rect key="frame" x="0.0" y="698" width="393" height="60"/>
+                    <rect key="frame" x="0.0" y="688" width="393" height="60"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="6E2-D7-LCE"/>
@@ -48,24 +52,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <view contentMode="scaleToFill" restorationIdentifier="GMSMapView" translatesAutoresizingMaskIntoConstraints="NO" id="kKf-U6-wMg" customClass="GMSMapView">
-                    <rect key="frame" x="0.0" y="59" width="393" height="639"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="kKf-U6-wMg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2W3-zZ-YaU"/>
-                <constraint firstItem="18c-q6-it2" firstAttribute="top" secondItem="qQ0-l2-gF8" secondAttribute="bottom" id="9VN-Yg-Ofm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qQ0-l2-gF8" secondAttribute="trailing" id="CuM-XB-Ohn"/>
-                <constraint firstItem="qQ0-l2-gF8" firstAttribute="top" secondItem="kKf-U6-wMg" secondAttribute="bottom" id="IIf-UW-1ii"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kKf-U6-wMg" secondAttribute="trailing" id="Wcp-d0-dJ9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="18c-q6-it2" secondAttribute="trailing" id="ad3-DY-kUO"/>
-                <constraint firstItem="kKf-U6-wMg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bN4-Ot-jmj"/>
-                <constraint firstItem="qQ0-l2-gF8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cbW-GF-4Ik"/>
-                <constraint firstItem="18c-q6-it2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pJb-1w-yQU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="18c-q6-it2" secondAttribute="bottom" id="qvT-Xq-4nm"/>
+                <constraint firstItem="18c-q6-it2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="30G-wq-s5Y"/>
+                <constraint firstItem="18c-q6-it2" firstAttribute="top" secondItem="qQ0-l2-gF8" secondAttribute="bottom" constant="10" id="7xj-h4-Fct"/>
+                <constraint firstItem="qQ0-l2-gF8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8SM-L7-Xiy"/>
+                <constraint firstItem="qQ0-l2-gF8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BGz-2S-B93"/>
+                <constraint firstItem="kKf-U6-wMg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cw3-Hi-9Z4"/>
+                <constraint firstItem="18c-q6-it2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Hup-MV-8SS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kKf-U6-wMg" secondAttribute="bottom" id="TM0-qZ-223"/>
+                <constraint firstItem="18c-q6-it2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="f9z-01-G5M"/>
+                <constraint firstItem="kKf-U6-wMg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nEe-Nw-vWz"/>
+                <constraint firstItem="kKf-U6-wMg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ysb-Sz-TTd"/>
             </constraints>
             <point key="canvasLocation" x="131" y="20"/>
         </view>

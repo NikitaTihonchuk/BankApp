@@ -38,7 +38,7 @@
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NWb-Kx-VUg" secondAttribute="bottom" id="5kI-Ww-jky"/>
                 <constraint firstItem="NWb-Kx-VUg" firstAttribute="top" secondItem="7gw-N4-cVQ" secondAttribute="bottom" id="DLM-XT-o9F"/>

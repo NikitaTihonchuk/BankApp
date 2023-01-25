@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 final class TabBarController: UITabBarController {
+    
+    var navigationControllers = [UINavigationController]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
@@ -20,29 +22,42 @@ final class TabBarController: UITabBarController {
             switch $0 {
             case .main:
                 let mainController = MapViewController()
+                mainController.navigationItem.largeTitleDisplayMode = .always
                     return self.wrappedInNavigationController(with: mainController, title: $0.title)
             case .gems:
                 let gemsController = GemsViewController()
+                gemsController.navigationItem.largeTitleDisplayMode = .always
                     return self.wrappedInNavigationController(with: gemsController, title: $0.title)
             case .metals:
                 let metalController = MetalViewController()
+                //metalController.navigationItem.largeTitleDisplayMode = .always
                     return self.wrappedInNavigationController(with: metalController, title: $0.title)
             case .news:
                 let newsController = NewsViewController()
+                newsController.navigationItem.largeTitleDisplayMode = .always
                     return self.wrappedInNavigationController(with: newsController, title: $0.title)
             }
+            
+            
         }
+        
+        
         
         self.viewControllers?.enumerated().forEach {
             $1.tabBarItem.title = dataSource[$0].title
             $1.tabBarItem.image = UIImage(systemName: dataSource[$0].iconName)
             tabBar.tintColor = .red
+            
         }
     }
     
     private func wrappedInNavigationController(with: UIViewController, title: Any?) -> UINavigationController {
-            return UINavigationController(rootViewController: with)
+        let controller = UINavigationController(rootViewController: with)
+            //controller.navigationBar.prefersLargeTitles = f
+            return controller
     }
+    
+    
     
 }
 

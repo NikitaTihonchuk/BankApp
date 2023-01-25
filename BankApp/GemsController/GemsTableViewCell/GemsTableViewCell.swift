@@ -21,7 +21,7 @@ class GemsTableViewCell: UITableViewCell {
         self.edge.text = edge
         self.weightLabel.text = weightLabel
         self.colorLabel.text = colorLabel
-        self.colorLabel.text = costLabel
+        self.costLabel.text = costLabel
         self.attestatLabel.text = attestatLabel
 
     }

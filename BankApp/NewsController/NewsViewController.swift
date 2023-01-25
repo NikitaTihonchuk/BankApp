@@ -18,6 +18,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Новости"
         registerCell()
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,6 +27,7 @@ class NewsViewController: UIViewController {
     
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
+        spinner.backgroundColor = .black
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
         return spinner

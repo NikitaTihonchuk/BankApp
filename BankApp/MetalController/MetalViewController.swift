@@ -11,21 +11,31 @@ final class MetalViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
     var metals = [Metal]() {
         didSet {
             tableView.reloadData()
         }
     }
     
+    private let spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.hidesWhenStopped = true
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentControl.selectedSegmentIndex = 0
+        title = "Металлы"
+        //tableView.addSubview(spinner)
+        //addConstraints()
         registerCells()
         parseData()
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
     private func registerCells() {
         let nib = UINib(nibName: "MetalTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MetalTableViewCell")
@@ -34,17 +44,30 @@ final class MetalViewController: UIViewController {
     private func parseData() {
         BelarusbankProvider().getMetals { [weak self] metal in
             guard let self else { return }
+            //self.spinner.startAnimating()
             self.metals = metal
+            
         } failure: { error in
+           // self.spinner.startAnimating()
             print(error)
         }
+        //self.spinner.stopAnimating()
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            spinner.widthAnchor.constraint(equalToConstant: 100),
+            spinner.heightAnchor.constraint(equalToConstant: 100),
+            spinner.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: tableView.centerYAnchor),
+        ])
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         tableView.reloadData()
     }
-    
 }
+
 
 extension MetalViewController: UITableViewDelegate {
     

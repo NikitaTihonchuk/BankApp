@@ -18,6 +18,7 @@ class GemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Гемы"
         registerCell()
         parseData()
         tableView.delegate = self
@@ -60,7 +61,7 @@ extension GemsViewController: UITableViewDataSource {
         
         tableCell.setName(town: gem.name,
                           name: gem.nameRu,
-                          edge: "",
+                          edge: gem.grani,
                           weightLabel: gem.weight,
                           colorLabel: gem.color,
                           costLabel: gem.cost,
