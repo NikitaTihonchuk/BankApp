@@ -40,8 +40,10 @@ class MapViewController: UIViewController {
     private func parseData() {
         BelarusbankProvider().getCurrency { [weak self] allBank in
             guard let self = self else { return }
-            self.cityNames = Array(Set(allBank.map({$0.city.lowercased() })))
             for bank in allBank {
+                if !self.cityNames.contains(bank.city.lowercased()) {
+                    self.cityNames.append(bank.city.lowercased())
+                }
                 self.drawMarkers(bank: bank)
             }
         } failure: { error in
