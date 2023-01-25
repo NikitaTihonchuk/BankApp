@@ -28,8 +28,8 @@ final class MetalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Металлы"
-        //tableView.addSubview(spinner)
-        //addConstraints()
+        tableView.addSubview(spinner)
+        addConstraints()
         registerCells()
         parseData()
         tableView.delegate = self
@@ -44,14 +44,13 @@ final class MetalViewController: UIViewController {
     private func parseData() {
         BelarusbankProvider().getMetals { [weak self] metal in
             guard let self else { return }
-            //self.spinner.startAnimating()
+            self.spinner.startAnimating()
             self.metals = metal
-            
+            self.spinner.stopAnimating()
         } failure: { error in
-           // self.spinner.startAnimating()
+            self.spinner.startAnimating()
             print(error)
         }
-        //self.spinner.stopAnimating()
     }
     
     private func addConstraints() {

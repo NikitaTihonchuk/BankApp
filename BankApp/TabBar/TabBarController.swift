@@ -30,7 +30,7 @@ final class TabBarController: UITabBarController {
                     return self.wrappedInNavigationController(with: gemsController, title: $0.title)
             case .metals:
                 let metalController = MetalViewController()
-                //metalController.navigationItem.largeTitleDisplayMode = .always
+                 metalController.navigationItem.largeTitleDisplayMode = .always
                     return self.wrappedInNavigationController(with: metalController, title: $0.title)
             case .news:
                 let newsController = NewsViewController()
@@ -53,7 +53,7 @@ final class TabBarController: UITabBarController {
     
     private func wrappedInNavigationController(with: UIViewController, title: Any?) -> UINavigationController {
         let controller = UINavigationController(rootViewController: with)
-            //controller.navigationBar.prefersLargeTitles = f
+            controller.navigationBar.prefersLargeTitles = true
             return controller
     }
     

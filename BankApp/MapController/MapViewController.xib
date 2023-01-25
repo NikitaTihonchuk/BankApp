@@ -27,7 +27,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="18c-q6-it2">
-                    <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                    <rect key="frame" x="0.0" y="742" width="393" height="60"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="dB6-Nw-D74"/>
@@ -40,7 +40,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-l2-gF8">
-                    <rect key="frame" x="0.0" y="688" width="393" height="60"/>
+                    <rect key="frame" x="0.0" y="672" width="393" height="60"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="6E2-D7-LCE"/>
@@ -61,7 +61,7 @@
                 <constraint firstItem="qQ0-l2-gF8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8SM-L7-Xiy"/>
                 <constraint firstItem="qQ0-l2-gF8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BGz-2S-B93"/>
                 <constraint firstItem="kKf-U6-wMg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cw3-Hi-9Z4"/>
-                <constraint firstItem="18c-q6-it2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Hup-MV-8SS"/>
+                <constraint firstItem="18c-q6-it2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="Hup-MV-8SS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kKf-U6-wMg" secondAttribute="bottom" id="TM0-qZ-223"/>
                 <constraint firstItem="18c-q6-it2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="f9z-01-G5M"/>
                 <constraint firstItem="kKf-U6-wMg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nEe-Nw-vWz"/>
