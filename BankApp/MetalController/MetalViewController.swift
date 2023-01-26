@@ -12,7 +12,7 @@ final class MetalViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var metals = [Metal]() {
+    private var metals = [Metal]() {
         didSet {
             tableView.reloadData()
         }
@@ -32,7 +32,6 @@ final class MetalViewController: UIViewController {
         addConstraints()
         registerCells()
         parseData()
-        tableView.delegate = self
         tableView.dataSource = self
     }
     
@@ -65,11 +64,6 @@ final class MetalViewController: UIViewController {
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         tableView.reloadData()
     }
-}
-
-
-extension MetalViewController: UITableViewDelegate {
-    
 }
 
 extension MetalViewController: UITableViewDataSource {
