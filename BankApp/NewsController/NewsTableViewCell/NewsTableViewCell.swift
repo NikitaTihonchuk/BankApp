@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var linkButton: UIButton!
     @IBOutlet weak var newsImage: UIImageView!
     
-    var link: String?
+    private var link: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,7 +10,7 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    var navigationControllers = [UINavigationController]()
+    private var navigationControllers = [UINavigationController]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()

@@ -7,22 +7,14 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+final class NewsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var bankNews = [News]() {
+    
+    private var bankNews = [News]() {
         didSet {
             tableView.reloadData()
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Новости"
-        registerCell()
-        tableView.delegate = self
-        tableView.dataSource = self
-        parseData()
     }
     
     private let spinner: UIActivityIndicatorView = {
@@ -33,6 +25,14 @@ class NewsViewController: UIViewController {
         return spinner
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Новости"
+        registerCell()
+        tableView.dataSource = self
+        parseData()
+    }
+    
     private func registerCell() {
         let nib = UINib(nibName: "NewsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsTableViewCell")
@@ -40,7 +40,6 @@ class NewsViewController: UIViewController {
     
     private func parseData() {
         self.spinner.startAnimating()
-
         BelarusbankProvider().getNews { [weak self] news in
             guard let self else { return }
             self.bankNews = news
@@ -55,10 +54,6 @@ class NewsViewController: UIViewController {
 
 }
 
-extension NewsViewController: UITableViewDelegate {
-    
-}
-
 extension NewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         bankNews.count
@@ -70,7 +65,6 @@ extension NewsViewController: UITableViewDataSource {
         let eachNew = bankNews[indexPath.row]
         newsCell.set(news: eachNew)
         return newsCell
-    }
-    
+    }    
     
 }

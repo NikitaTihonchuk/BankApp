@@ -7,10 +7,10 @@
 
 import UIKit
 
-class GemsViewController: UIViewController {
+final class GemsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var allGems = [Gems]() {
+    private var allGems = [Gems]() {
         didSet {
             tableView.reloadData()
         }
@@ -21,13 +21,12 @@ class GemsViewController: UIViewController {
         title = "Гемы"
         registerCell()
         parseData()
-        tableView.delegate = self
         tableView.dataSource = self
         
        
     }
     
-    func parseData() {
+    private func parseData() {
         BelarusbankProvider().getGems { [weak self] gems in
             guard let self else { return }
             self.allGems = gems
@@ -38,18 +37,16 @@ class GemsViewController: UIViewController {
 
     }
     
-    func registerCell() {
+    private func registerCell() {
         let nib = UINib(nibName: "GemsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "GemsTableViewCell")
     }
     
 }
 
-extension GemsViewController: UITableViewDelegate {
-    
-}
 
 extension GemsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allGems.count
     }

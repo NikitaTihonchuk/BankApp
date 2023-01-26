@@ -20,7 +20,7 @@ class MetalTableViewCell: UITableViewCell {
 
     }
 
-     func set(town: String, department: String, gramm10: String, gramm20: String, gramm50: String) {
+    func set(town: String, department: String, gramm10: String, gramm20: String, gramm50: String) {
         self.townLabel.text = town
         self.departmentLabel.text = department
         self.gramm10Label.text = gramm10
