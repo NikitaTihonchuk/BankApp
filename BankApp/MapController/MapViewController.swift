@@ -27,6 +27,7 @@ final class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.isMyLocationEnabled = true
+        parseBank()
         parseData()
         registerCell()
         sortCollectionView.delegate = self
@@ -38,6 +39,15 @@ final class MapViewController: UIViewController {
     private func registerCell() {
         sortCollectionView.register(UINib(nibName: "SortCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SortCollectionViewCell")
         cityCollectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CityCollectionViewCell")
+    }
+    
+    private func parseBank() {
+        BelarusbankProvider().getFillials { [weak self] allFillials in
+            guard let self = self else { return }
+            for fillials in allFillials {
+                self.drawFillialMarkers(fillial: fillials)
+            }
+        } failure: { error in print(error)}
     }
     
     private func parseData() {
@@ -53,6 +63,31 @@ final class MapViewController: UIViewController {
         } failure: { error in
             print(error)
         }
+    }
+    
+    private func drawFillialMarkers(fillial: Fillials) {
+        guard let bankXcoordinate = Double(fillial.coordinateX),
+              let bankYcoordinate = Double(fillial.coordinateY) else { return }
+        let position = CLLocationCoordinate2D(latitude: bankXcoordinate, longitude: bankYcoordinate)
+        if filterName == nil {
+            let bankLocation = CLLocation(latitude: position.latitude, longitude: position.longitude)
+            guard let distance = mapView.myLocation?.distance(from: bankLocation) else { return }
+            if distance < 5000 {
+                let marker = GMSMarker(position: position)
+                marker.icon = GMSMarker.markerImage(with: .systemYellow)
+                getAdditionalInfo(marker: marker, title: fillial.fillialName, snippet: "улица \(fillial.street)")
+                 marker.map = mapView
+            } else { return }
+        } else {
+            guard let filterName else { return }
+            if fillial.city.lowercased() == filterName {
+                let marker = GMSMarker(position: position)
+                marker.icon = GMSMarker.markerImage(with: .systemYellow)
+                getAdditionalInfo(marker: marker, title: fillial.fillialName, snippet: "улица \(fillial.street)")
+                marker.map = mapView
+            }
+        }
+
     }
     
     private func drawMarkers(bank: Location) {
@@ -103,13 +138,25 @@ extension MapViewController: UICollectionViewDelegate {
         if collectionView == cityCollectionView {
             filterName = cityNames[indexPath.row]
             mapView.clear()
+            parseBank()
             parseData()
+        } else if collectionView == sortCollectionView {
+            let name = namesOfSorting[indexPath.row]
+                if name == "Банки" {
+                    mapView.clear()
+                    parseData()
+                } else if name == "Филлиалы" {
+                    mapView.clear()
+                    parseBank()
+                } else if name == "Все" {
+                    mapView.clear()
+                    parseData()
+                    parseBank()
+                }
         }
     }
-    
+
 }
-
-
 
 
 extension MapViewController: UICollectionViewDataSource {
@@ -133,8 +180,6 @@ extension MapViewController: UICollectionViewDataSource {
             nameCell.setCityButton(name: cityNames[indexPath.row])
             return nameCell
         }
-        
-       
     }
     
     

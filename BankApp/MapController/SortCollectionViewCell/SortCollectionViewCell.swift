@@ -9,7 +9,8 @@ import UIKit
 
 class SortCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var buttonNameSorting: UIButton!
+   
+    @IBOutlet weak var sortLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +18,7 @@ class SortCollectionViewCell: UICollectionViewCell {
     }
     
     func setButtonName(name: String) {
-        buttonNameSorting.setTitle(name, for: .normal)
+        sortLabel.text = name
     }
     
 }

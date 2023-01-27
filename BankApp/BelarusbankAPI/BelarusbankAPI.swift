@@ -3,6 +3,7 @@ import Moya
 
 enum BelarusbankAPI {
     case getAllBank
+    case getFillials
     case getGems
     case getMetal
     case getNews
@@ -11,14 +12,8 @@ enum BelarusbankAPI {
 extension BelarusbankAPI: TargetType {
     var baseURL: URL {
         switch self {
-        case .getAllBank:
-            return URL(string: "https://belarusbank.by/api/atm?")!
-        case .getGems:
-            return URL(string: "https://belarusbank.by/api/getgems")!
-        case .getMetal:
-            return URL(string: "https://belarusbank.by/api/getinfodrall")!
-        case .getNews:
-            return URL(string: "https://belarusbank.by/api/news_info")!
+        case .getAllBank, .getGems, .getMetal, .getNews, .getFillials:
+            return URL(string: "https://belarusbank.by/api")!
         }
         
         
@@ -27,13 +22,15 @@ extension BelarusbankAPI: TargetType {
     var path: String {
         switch self {
         case .getAllBank:
-            return ""
+            return "atm"
         case .getGems:
-            return ""
+            return "getgems"
         case .getMetal:
-            return ""
+            return "getinfodrall"
         case .getNews:
-            return ""
+            return "news_info"
+        case .getFillials:
+            return "filials_info"
         }
         
     }
@@ -51,6 +48,8 @@ extension BelarusbankAPI: TargetType {
         case .getMetal:
             return .get
         case .getNews:
+            return .get
+        case .getFillials:
             return .get
         }
     }
@@ -77,13 +76,15 @@ extension BelarusbankAPI: TargetType {
             return nil
         case .getNews:
             parameters["lang"] = "ru"
+        case .getFillials:
+            return nil
         }
         return parameters
     }
     
     var enocding: ParameterEncoding {
         switch self {
-        case .getAllBank, .getGems, .getMetal, .getNews:
+        case .getAllBank, .getGems, .getMetal, .getNews, .getFillials:
             return URLEncoding.queryString
             
         }

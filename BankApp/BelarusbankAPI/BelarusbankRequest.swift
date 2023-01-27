@@ -62,4 +62,16 @@ final class BelarusbankProvider {
             }
         }
     }
+    
+    func getFillials(success: @escaping ArrayResponce<Fillials>, failure: @escaping Error) {
+        provider.request(.getFillials) { result in
+            switch result {
+                case .success(let responce):
+                    guard let fillials = try? JSONDecoder().decode([Fillials].self, from: responce.data) else { return }
+                    success(fillials)
+                case .failure(let error):
+                    failure(error.localizedDescription)
+            }
+        }
+    }
 }

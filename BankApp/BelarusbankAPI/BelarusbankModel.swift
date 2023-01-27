@@ -137,3 +137,30 @@ struct News: Decodable {
         self.image = try container.decode(String.self, forKey: .image)
     }
 }
+
+struct Fillials: Decodable {
+    var fillialName: String
+    var city: String
+    var street: String
+    var coordinateX: String
+    var coordinateY: String
+    
+    enum CodingKeys: String, CodingKey {
+        case fillialName = "filial_name"
+        case city = "name"
+        case street = "street"
+        case coordinateX = "GPS_X"
+        case coordinateY = "GPS_Y"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.fillialName = try container.decode(String.self, forKey: .fillialName)
+        self.city = try container.decode(String.self, forKey: .city)
+        self.street = try container.decode(String.self, forKey: .street)
+        self.coordinateX = try container.decode(String.self, forKey: .coordinateX)
+        self.coordinateY = try container.decode(String.self, forKey: .coordinateY)
+
+    }
+    
+}
